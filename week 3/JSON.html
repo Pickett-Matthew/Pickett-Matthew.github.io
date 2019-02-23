@@ -1,38 +1,45 @@
 <!Doctype html>
 <html>
-    <head>
-    </head>
     <body>
-        <h2>JSON Parse</h2>
-        <p>This is an example of string to object</p>
-        <p id="houseObj"></p>
+        <h4>JSON PARSE</h4>
+        <p>I want to create a car object. I'm going to take this text<br><br><i>'{"make":"Chevy", "model":"Impala", "color":"Black"}'</i><br><br> and make it into an object.</p>
+        
+        <p>Click to button to create the object</p>
+        <button onclick="Parse()">PARSE</button>
+        <p id="display"></p>
         <hr>
-        <h2>JSON STRINGIFY</h2>
-        <p>This is an example of turning an object into a string</p>
-        <p id="strHouse"></p>
+        
+        <h4>JSON STRINGIFY</h4>
+        <p>Now we want to take an object and turn it into a <b>string</b><br>
+        Enter the details of your car.</p>
+        <p>Make: <input id="make" size=10><br><br>
+            Model: <input id="model" size=10><br><br>
+            Color: <input id="color" size=10></p>
+        <button onclick="Stringify()">STRINGIFY</button>
+        <p id="display2"></p>
     </body>
     <script>
-        //The JSON.parse() method parses a string and returns a JavaScript object.
-        var houseString = '{ "color":"red", "price":"100,000", "size":"2000-sqrft" }';
-        
-        var house = JSON.parse(houseString)
-        
-        document.getElementById("houseObj").innerHTML = "The " + house.color
-        + " house is going for $" + house.price + ".";
-        
-        //here is a house object
-        
-        var myHouse = {
+        function Parse() {
             
-            color:"white",
-            size:"2000-sqrft", 
-            price:"250,000"
-        };
+            var string = '{"make":"Chevy", "model":"Impala", "color":"Black"}'
+            
+            var car = JSON.parse(string);
+            document.getElementById("display").innerHTML = 
+                car.make + ", " + car.model + ", " + car.color;
+        }
         
-        var makeHouseObj = JSON.stringify(myHouse);
-        
-        document.getElementById("strHouse").innerHTML = makeHouseObj;
-        
+        function Stringify() {
+            
+            var make = document.getElementById("make").value;
+            var model = document.getElementById("model").value;
+            var color = document.getElementById("color").value;
+            
+            var car = {make: make, model: model, color: color};
+            
+            var stringify = JSON.stringify(car);
+            
+            document.getElementById("display2").innerHTML = stringify;
+        }
         
     </script>
 </html>
