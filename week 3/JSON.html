@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>JSON Parse</h2>
+        <p>This is an example of string to object</p>
+        <p id="houseObj"></p>
+        <hr>
+        <h2>JSON STRINGIFY</h2>
+        <p>This is an example of turning an object into a string</p>
+        <p id="strHouse"></p>
+    </body>
+    <script>
+        //The JSON.parse() method parses a string and returns a JavaScript object.
+        var houseString = '{ "color":"red", "price":"100,000", "size":"2000-sqrft" }';
+        
+        var house = JSON.parse(houseString)
+        
+        document.getElementById("houseObj").innerHTML = "The " + house.color
+        + " house is going for $" + house.price + ".";
+        
+        //here is a house object
+        
+        var myHouse = {
+            
+            color:"white",
+            size:"2000-sqrft", 
+            price:"250,000"
+        };
+        
+        var makeHouseObj = JSON.stringify(myHouse);
+        
+        document.getElementById("strHouse").innerHTML = makeHouseObj;
+        
+        
+    </script>
+</html>

@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2>Objects </h2>
+        <p id="old"></p><br>
+        <p id="new"></p><br>
+        <p id="pType"></p>
+    </body>
+    <script>
+       
+        //constructor function for a house
+        function House(color, size, price) {
+            this.color = color;
+            this.size = size;
+            this.price = price;
+        }
+        
+        //creation of new house objects
+        var oldHouse = new House("Red", "1000sqft", "$100,000");
+        
+        var newHouse = new House("Blue", "2000sqft", "$200,000");
+        
+        //display old home specs
+        document.getElementById("old").innerHTML = "You old house details are " + oldHouse.color + ", " + oldHouse.size + ", " + oldHouse.price; 
+        
+        //display new home specs
+        document.getElementById("new").innerHTML = "You new house details are " + newHouse.color + ", " + newHouse.size + ", " + newHouse.price; 
+        
+        //Create a prototype for the value of the home
+        House.prototype.value = function() {
+            return this.price + " for " + this.size;
+        };
+        
+        //display the prototype
+        document.getElementById("pType").innerHTML = "The value of the new home is " + newHouse.value();
+        
+    </script>
+</html>

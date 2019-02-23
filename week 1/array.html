@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+         <h2>Arrays</h2>
+        <h4>An array has been created,<br>
+        enter any color and it will be<br>
+        added to the end of the array.</h4>
+        <input type="text" id="push">
+        <button onclick="arr()">Push</button>
+        <p id="arrPush"></p>
+    </body>
+    <script>
+        function arr() {
+            
+            var display;
+            var color = push.value;
+            
+            var myArray = ["Periwinkle", "Indago", "Magenta"];
+            
+            myArray.push(color);
+            
+            document.getElementById("arrPush").innerHTML = myArray;
+            
+            //associative array
+            var aAray = {
+                name: "Matt", 
+                age: "26", 
+                class: "CIT 261", 
+                grade: "A+++++"
+            }; 
+        }
+    </script>
+</html>
