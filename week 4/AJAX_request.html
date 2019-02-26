@@ -21,7 +21,7 @@
             
             var request = new XMLHttpRequest();
             
-            request.open('GET', 'https://raw.githubusercontent.com/Pickett-Matthew/github/master/meal_data.json');
+            request.open('GET', 'https://raw.githubusercontent.com/Pickett-Matthew/Pickett-Matthew.github.io/master/week%204/meal_data.json');
             request.onload = function() {
                 var data = JSON.parse(request.responseText);
                 displayMeals(data);
