@@ -1,0 +1,17 @@
+[
+    {
+    "monday": 
+        {
+            "breakfast":"2 eggs and toast", 
+            "lunch":"ham and cheese sandwich", 
+            "dinner":"grilled chicken and zuccini"
+        }, 
+    "tuesday": 
+        {
+            "breakfast":"yogurt and granola", 
+            "lunch":"ceasar salad with breadsticks", 
+            "dinner":"chicken noodle soop"
+        }
+    }
+
+]

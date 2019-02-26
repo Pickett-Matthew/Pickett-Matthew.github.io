@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+    <head>
+    </head>
+    
+    <body>
+        <h2>AJAX requesting a JSON file</h2>
+        <p>Click to request meal plan</p>
+        <button id="btn">Get Meals</button><br><br>
+        <h3 id="mealInfo"></h3>
+    </body>
+    
+    <script>
+        var mInfo = document.getElementById("mealInfo");
+        //variable to control the button
+        var btn = document.getElementById("btn");
+        
+        //event listener pays attention to when the button is hit
+        //embedded anonymous function
+        btn.addEventListener("click", function() {
+            
+            var request = new XMLHttpRequest();
+            
+            request.open('GET', 'https://raw.githubusercontent.com/Pickett-Matthew/github/master/meal_data.json');
+            request.onload = function() {
+                var data = JSON.parse(request.responseText);
+                displayMeals(data);
+            };
+            request.send();
+        });
+        
+        function displayMeals(myData) {
+            var displayString = "";
+            
+            for(var i = 0; i < myData.length; i++) {
+                displayString += "For breakfast we are having " + myData[i].breakfast
+                + ". <br>" + "For Lunch we will be having a " + myData[i].lunch + ". <br>" 
+                + "Dinner will be " + myData[i].dinner + ".";
+            }
+            
+            mInfo.insertAdjacentHTML('beforeend', displayString);
+            
+        };
+        
+    </script>
+    
+</html>
