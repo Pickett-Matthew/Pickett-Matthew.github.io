@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <body>
+        <h2>Local Storage</h2>
+        <p>Information will be stored </p>
+        
+            First Name: <input id="fName">
+            Last Name: <input id="lName">
+            
+        <button onclick="lStorage()">submit</button><br><br>
+       
+        <div id="stored">This information will be saved even if you close the browser.
+            <p id="display"></p>
+            <p id="display2"></p>
+        </div><br><hr>
+    </body>
+    <script>
+        stored.style.visibility = "hidden";
+        
+        function lStorage() {
+            var first = fName.value;
+            var last = lName.value;
+
+            
+            stored.style.visibility = "visible";
+            
+            localStorage.setItem("First", first);
+            localStorage.setItem("Last", last);
+    
+            
+            document.getElementById("display").innerHTML = localStorage.getItem("First");
+            document.getElementById("display2").innerHTML = localStorage.getItem("Last");
+        }
+
+    </script>
+</html>

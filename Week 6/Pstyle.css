@@ -1,0 +1,18 @@
+p {
+    width:300px;
+    height: 100px;
+    background-color: azure;
+}
+
+body {
+    background-color: dimgrey;
+    text-align: center;
+}
+
+H2 {
+    color: white;
+}
+
+H4 {
+    color: white;
+}
