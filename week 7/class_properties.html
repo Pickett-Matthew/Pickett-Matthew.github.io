@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+    <head><link href="7style.css" rel="stylesheet"</head>
+    <body>
+        <h2>CSS class properties</h2>
+        <p>By clicking the button you will be changing the class to which the div belongs.
+        <button onclick="changeShape()">click</button><br>
+        </p><br><br>
+        <div id="shape" class="start">
+        </div><hr>
+        
+        <div id="pText" class="basic">
+            <p>Click the button change the font of this text</p>
+            <p>All of the elements in this Div will change</p>
+            <p>Here is some random text to change</p>
+            <button onclick="textChange()">change font</button>
+        </div>
+    </body>
+    <script>
+        function changeShape() {
+            
+            var myShape = document.getElementById("shape");
+            
+            if (myShape.className == "start") {
+                myShape.className = " circle"; 
+                
+            } else if (myShape.className == " circle") {
+                myShape.className = " square";
+                
+            } else if (myShape.className == " square") {
+                myShape.className = " trap";
+            }
+        }
+        
+        function textChange() {
+            var font = document.getElementById("pText");
+            
+            if (font.className == "basic") {
+                font.className = "newFont";
+            }
+            
+        }
+    </script>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

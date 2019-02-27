@@ -1,0 +1,36 @@
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: blue;
+
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: darkgreen;
+}
+
+.trap {
+	border-bottom: 50px solid #555;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+
+.basic {
+    text-align: center;
+    font-size: 150%;
+}
+
+.start {
+    text-align: center;
+} 
+
+.newFont {
+    text-align: center;
+    font-family: fantasy;
+}
+
