@@ -1,13 +1,108 @@
 <!Doctype html>
 <html>
     <head>
-        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
+    <style>
+        h2 {
+            padding-top: 100px;
+        }
+        
+        .container{
+           text-align: center;
+        }
+        
+        .myBlock {
+            height: 200px;
+            width: 250px;
+            background-color: white;
+            border-style: solid;
+            border-color: red;
+            border-radius: 60px 20px;
+        }
+        
+        .translate {
+            height: 200px;
+            width: 250px;
+            background-color: white;
+            border-style: solid;
+            border-color: red;
+            border-radius: 60px 20px;
+            transform: translate(550px, 50px);
+        }
+        
+        .blue {
+            height: 150px;
+            width: 150px;
+            background-color: white;
+            border-style: solid;
+            border-color: skyblue;
+            border-radius: 60px 20px;
+            transform: translate(900px);
+        }
+        
+        .scale {
+            height: 150px;
+            width: 150px;
+            background-color: white;
+            border-style: solid;
+            border-color: skyblue;
+            border-radius: 60px 20px;
+            transform: translate(550px) scale(2);
+        }
+        
+        .block {
+            width: 200px;
+            height: 200px;
+            background-color: lightsteelblue;
+            font-size: 200%;
+            transform: translate(900px);
+        }
+        
+        .rotateX {
+            width: 200px;
+            height: 200px;
+            background-color: lightsteelblue;
+            font-size: 200%;
+            transform: translate(900px) rotateZ(180deg);
+        }
+        
+    </style>
     <body>
-        <div class="wrapper">
-            <img src="mario.png">
+        <div class="container">
+            <h1>Transforms</h1>
+            
+            <button onclick="myTranslate()">Translate</button>
+            <div class="myBlock" id="block"></div>
+            
+            <h2><button onclick="scale()">Scale</button></h2>
+            <div class="blue" id="sc"></div>
+            
+            <h2><button onclick="myRotate()">RotateX</button></h2>
+            <div class="block" id="rotate">FLIP</div>
         </div>
     </body>
     <script>
+        
+        function myTranslate() {
+            
+            document.getElementById("block").className = "translate";
+        }
+        
+        function scale() {
+            document.getElementById("sc").className = "scale";
+        }
+        
+        function myRotate() {
+            document.getElementById("rotate").className = "rotateX";
+        }
     </script>
 </html>
+
+
+
+
+
+
+
+
+
