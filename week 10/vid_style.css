@@ -1,0 +1,10 @@
+.wrapper {
+    text-align: center;
+    columns: 2;
+    
+}
+header {
+    font-size: 200%;
+    text-align: center;
+    padding: 50px;
+}

@@ -1,0 +1,84 @@
+#box {
+    height: 200px;
+    width: 250px;
+    background: gray;
+    border: 1px solid #222;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background-color: lightgrey;
+}
+
+#sel {
+    width:100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+}
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #432;
+    max-width: 700px;
+    text-align: center;
+    padding:20px;
+
+}
+.wrapper2 {
+    display: grid;
+    padding: 100px;
+}
+.one {
+    height: 100px;
+    width: 100px;
+    background-color: lightgreen;
+    text-align: center;
+    font-family: monospace;
+    font-size: 150%;
+    border-radius: 80% 80%;
+    position: fixed;
+    animation: green 8s infinite;
+}
+.two {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+    font-family: monospace;
+    font-size: 150%;
+    border-radius: 80% 80%;
+    position: fixed;
+}
+
+@keyframes green {
+    from {left: 700px;}
+    to {left: 1100px }  
+}
+
+.touchEvent {
+    font-size: 150%;
+    text-align: center;
+    padding: 50px;
+    animation: blink;
+    animation-delay: 10s;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes blink {
+    from {color: black;}
+    to {color: lightgray;}
+}
+
+
+
+
+
+
+
+
+
+

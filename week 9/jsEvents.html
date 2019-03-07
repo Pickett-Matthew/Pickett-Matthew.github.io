@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="week09Style.css">
+    </head>
+    <body onload="keys(ev)">
+        <div id="wrapper">
+            <h1>JS Events</h1>
+            <p>Use the selector to change the color of the square</p>
+            <div id="box">
+            <select id="sel" onchange="change_color()">
+                <option value=""></option>
+                <option value="red">red</option>
+                <option value="lightgreen">green</option>
+                </select>
+            </div>
+        
+            <div class="wrapper2">
+                <div class="one" id="gball">
+                    <p id="message">Green means go!</p>
+                </div>
+                <div class="two" id="rball">
+                    <p id="message">Red Means Stop!</p>
+                </div>
+            </div>
+        </div>
+            
+         <div class="touchEvent">
+             <p>Scanning for keys</p>
+             <p id="ctrl">Hit the ctrl key</p>
+             <p id="shift">Hit the shift key</p>
+        </div>
+    </body>
+    <script>
+        
+        gball.style.visibility = "hidden";
+        rball.style.visibility = "hidden";
+        
+        var select = document.getElementById("sel");
+        var box = document.getElementById("box");
+        
+        function change_color() {
+            
+            box.style.background = select.value;
+            
+            if (select.value == "lightgreen") {
+                gball.style.visibility = "visible";
+                
+            } else if (select.value == "red") {
+                rball.style.visibility = "visible";
+            }
+        }
+        
+        var ctrl = document.getElementById("ctrl");
+        var shift = document.getElementById("shift");
+        
+        function keys() {
+            
+        }
+    
+    </script>
+</html>
