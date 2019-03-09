@@ -1,38 +1,58 @@
 <!Doctype html>
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header>
+        <h1>JavaScript Objects</h1><hr>
+    </header>
     <body>
-        <h2>Objects </h2>
-        <p id="old"></p><br>
-        <p id="new"></p><br>
-        <p id="pType"></p>
+        <div class="wrapper">
+            <div id="intro">
+                The values that we want in our house object are COLOR, SIZE and PRICE. Let's pass in those values and call this House object your "OLD HOUSE".
+            </div>
+            <div class="myForm">
+               <p>
+                   <label for="Color">COLOR:</label>
+                   <input type="text" name="Color" id="oldColor">
+                </p>
+                <p>
+                    <label for="Size">SQRFT:</label>
+                    <input type="text" name="Size" id="oldSize">
+                </p>
+                <p>
+                    <label for="Price">PRICE:</label>
+                    <input type="number"name="Price" id="oldPrice">
+                </p>
+                <p>
+                    <button onclick="form1()">submit</button>
+                </p>
+                <div id="display1"></div>
+            </div>
+        </div><br>
+        <div class="wrapper">
+            <div id="intro">
+                Now lets create a new house that uses a prototype function. We will combine the price and the size methods to create a new property called "Value".
+            </div>
+            <div class="myForm">
+               <p>
+                   <label for="Color">COLOR:</label>
+                   <input type="text" name="Color" id="Color">
+                </p>
+                <p>
+                    <label for="Size">SQRFT:</label>
+                    <input type="text" name="Size" id="Size">
+                </p>
+                <p>
+                    <label for="Price">PRICE:</label>
+                    <input type="number" name="Price" id="Price">
+                </p>
+                <p>
+                    <button onclick="form2()">submit</button>
+                </p>
+                <div id="pType"></div>
+            </div>
+        </div>
     </body>
-    <script>
-       
-        //constructor function for a house
-        function House(color, size, price) {
-            this.color = color;
-            this.size = size;
-            this.price = price;
-        }
-        
-        //creation of new house objects
-        var oldHouse = new House("Red", "1000sqft", "$100,000");
-        
-        var newHouse = new House("Blue", "2000sqft", "$200,000");
-        
-        //display old home specs
-        document.getElementById("old").innerHTML = "You old house details are " + oldHouse.color + ", " + oldHouse.size + ", " + oldHouse.price; 
-        
-        //display new home specs
-        document.getElementById("new").innerHTML = "You new house details are " + newHouse.color + ", " + newHouse.size + ", " + newHouse.price; 
-        
-        //Create a prototype for the value of the home
-        House.prototype.value = function() {
-            return this.price + " for " + this.size;
-        };
-        
-        //display the prototype
-        document.getElementById("pType").innerHTML = "The value of the new home is " + newHouse.value();
-        
-    </script>
+    <script src="script.js"></script>
 </html>
