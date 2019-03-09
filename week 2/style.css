@@ -6,7 +6,7 @@
 #intro {
     font-family: monospace;
     font-size: 150%;
-    padding: 50px;
+    padding: 15px;
     text-align: center;
 }
 #display1 {
@@ -36,3 +36,23 @@ body {
     padding: 40px;
     background-color: #333;
 }
+#head {
+    text-align: center;
+    font-family: fantasy;
+    font-size: 250%;
+    
+}
+#tObj {
+    font-size: 125%;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+

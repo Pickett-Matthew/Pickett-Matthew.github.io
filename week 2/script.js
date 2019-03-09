@@ -32,4 +32,4 @@ function form2() {
     //display the prototype
     document.getElementById("pType").innerHTML = "The value of the new home is " + myHouse.value();
 }
-        
+    
