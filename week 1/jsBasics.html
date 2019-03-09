@@ -15,11 +15,17 @@
         <button onclick="con()">Enter</button>
         <p id="response"></p><hr>
         
+        
         <h2>Loop Example</h2>
         <p id="4Loop">Click to display contents of for loop</p>
         <button id="4btn">For Loop</button><br>
-        <p id="showLoop">Code example will be shown here</p>
+        <p id="showLoop">Code example will be shown here</p><hr>
         
+        
+        <h2>While Loops</h2>
+        <p>I will identify all the vowels in this text using a while loop.</p>
+        <button onclick="myWhile()">Start</button>
+        <p id="vowels"></p>
     </body>
     
     <script>
@@ -63,7 +69,6 @@
         
         function loop1() {
             
-            var nums = "";
             var i = 0;
             
             for(i; i < 10; i++) {
@@ -81,5 +86,42 @@
             document.getElementById("showLoop").innerHTML = loop2;
                 
         }
+        /**********************************************************
+        * while loop
+        **********************************************************/
+    
+        
+        function myWhile() {
+            var myString = "I will identify all the vowels in this text using a while loop.";
+            var display = document.getElementById("vowels");
+            var i = 0;
+            var vCount = " ";
+            var numVowels = 0;
+            while(i < myString.length) {
+                
+                if(myString[i] == "a" || myString[i] == "e"
+                   || myString[i] == "i" || myString[i] == "o" 
+                   || myString[i] == "u") {
+                    
+                    console.log(vCount[i]);
+                    vCount += myString[i];
+                    numVowels++;
+                } 
+                i++;
+            }
+            display.innerHTML = "There are " + numVowels + " Vowels and they are " + vCount;
+        }
+        
     </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+

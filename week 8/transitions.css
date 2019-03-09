@@ -1,7 +1,7 @@
 #box1 {
     background-color: #333;
-    height:1600px;
-    width:1200px;
+    height:600px;
+    width:500px;
     position: relative;
 
 }
@@ -14,10 +14,14 @@
 
 }
 
-p {
+.wrapper {
     text-align: center;
+    padding: 50px;
 }
 
+body {
+    background-color: #333;
+}
 
 
 
