@@ -1,36 +1,72 @@
 <!Doctype html>
 <html>
+    <head>
+        <link rel="stylesheet" href="storage_style.css">
+    </head>
     <body>
-        <h2>Local Storage</h2>
-        <p>Information will be stored </p>
-        
-            First Name: <input id="fName">
-            Last Name: <input id="lName">
-            
-        <button onclick="lStorage()">submit</button><br><br>
-       
-        <div id="stored">This information will be saved even if you close the browser.
-            <p id="display"></p>
-            <p id="display2"></p>
-        </div><br><hr>
+        <div id="wrapper">
+            <h2>Local Storage API</h2>
+            <div class="myForm">
+               <p>
+                   <label for="first">First:</label>
+                   <input type="text" name="first" id="fName"></p>
+                <p>
+                    <label for="last">Last:</label>
+                    <input type="text" name="last" id="lName"></p>
+                <button onclick="lStorage()">submit</button>
+            </div>
+            <div id="stored">
+                <p id="display"></p>
+                <p id="display2"></p>
+                <p id="cLog"></p>
+            </div><hr>
+
+            <div id="Middle">
+                <p>We can call the saved items by using the getItem() method</p>
+                <button onclick="getFirst()">FirstName</button>
+                <button onclick="getLast()">LastName</button>
+            </div><hr>
+
+            <div class="remove">
+                <p>Now let's clear that local storage by calling the removeItem() method.</p>
+                <button onclick="remove()">Remove</button>
+                <p id="rState"></p>
+                <p>Session storage can also be used, but data will be deleted when page is refreshed.</p>
+            </div>
+        </div>
     </body>
     <script>
         stored.style.visibility = "hidden";
         
         function lStorage() {
+            
             var first = fName.value;
             var last = lName.value;
 
-            
             stored.style.visibility = "visible";
             
-            localStorage.setItem("First", first);
-            localStorage.setItem("Last", last);
+            localStorage.setItem("firstName", first);
+            localStorage.setItem("lastName", last);
+            console.log(localStorage);
     
-            
-            document.getElementById("display").innerHTML = localStorage.getItem("First");
-            document.getElementById("display2").innerHTML = localStorage.getItem("Last");
+            document.getElementById("display").innerHTML = localStorage.getItem("firstName");
+            document.getElementById("display2").innerHTML = localStorage.getItem("lastName");
+            document.getElementById("cLog").innerHTML = "If you check the console you can see that these two items are in local storage."
         }
-
+        
+        function getFirst() {
+            alert("The first name stored is " + localStorage.getItem("firstName"));
+        }
+        function getLast() {
+            alert("The last name stored is " + localStorage.getItem("lastName"));
+        }
+        
+         function remove() {
+            localStorage.removeItem("firstName");
+            localStorage.removeItem("lastName");
+            
+            console.log(localStorage);
+            document.getElementById("rState").innerHTML = "removed!, you can check the console to verify that the local storage has been cleared.";
+        }
     </script>
 </html>
