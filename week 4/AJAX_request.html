@@ -1,17 +1,27 @@
 <!Doctype html>
 <html>
     <head>
+        <link rel="stylesheet" href="style_ajax.css">
     </head>
-    
     <body>
-        <h2>AJAX requesting a JSON file</h2>
-        <p>Click to request meal plan</p>
-        <button id="btn">Get Meals</button><br><br>
-        <h3 id="mealInfo"></h3>
+        <div class="wrapper">
+            <h2>AJAX requesting a JSON file</h2>
+            <p>Click to request meal plan</p>
+            <button id="btn">Get Meals</button>
+            <div id="mealInfo"></div>
+        </div><hr>
+        <div class="explain">
+            <p>Info from <i>"https://raw.githubusercontent.com/Pickett-Matthew/Pickett-Matthew.github.io/master/week%204/meal_data.json"</i>
+            was called which contains JSON data with the meals. 
+            </p>
+        </div>
     </body>
     
     <script>
+        
         var mInfo = document.getElementById("mealInfo");
+        
+        mInfo.style.visibility = "hidden";
         //variable to control the button
         var btn = document.getElementById("btn");
         
@@ -30,6 +40,7 @@
         });
         
         function displayMeals(myData) {
+            mInfo.style.visibility = "visible";
             var displayString = "";
             
             for(var i = 0; i < myData.length; i++) {
@@ -41,7 +52,6 @@
             mInfo.insertAdjacentHTML('beforeend', displayString);
             
         };
-        
     </script>
     
 </html>
