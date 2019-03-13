@@ -7,10 +7,17 @@
     <body>
         <div class="wrapper">
             <h1>CSS TRANSITIONS</h1>
-            <button onclick="move()">click</button>
+            <button onclick="move()">Trigger JS</button>
             <div id="box1">
                 <div id="box2"></div>
             </div>
+        </div><hr>
+        <div class="wrapper2">
+            <p>Animations</p>
+            <button onclick="myAnimate()">Begin</button>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
         </div>
     </body>
     <script>
@@ -29,6 +36,16 @@
                 }
             }
         }
-       
+        
+        function myAnimate() {
+            
+            var one = document.getElementById("1");
+            one.classList.toggle("animate1");
+            var two = document.getElementById("2");
+            two.classList.toggle("animate2");
+            var three = document.getElementById("3");
+            three.classList.toggle("animate3");
+            
+        }
     </script>
 </html>

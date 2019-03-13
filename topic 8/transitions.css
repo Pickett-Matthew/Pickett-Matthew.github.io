@@ -1,8 +1,10 @@
 #box1 {
     background-color: #333;
     height:600px;
-    width:500px;
+    width:700px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 #box2 {
@@ -17,11 +19,95 @@
 .wrapper {
     text-align: center;
     padding: 50px;
+    height: 900px;
+    width: 1400px;
+    background-color: dimgrey;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
 body {
-    background-color: #333;
+    background-color: black;
+    padding: 20px;
 }
+.wrapper2 {
+    height: 950px;
+    width: 1400px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+}
+.wrapper2 p{
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+}
+
+.animate1 {
+    width: 250px;
+    height: 250px;
+    background-color: darkseagreen;
+    border-radius: 50% 50% 50% 50%;
+    animation-name: mine;
+    animation-duration: 3s;
+}
+.animate2 {
+    width: 250px;
+    height: 250px;
+    background-color: darkseagreen;
+    border-radius: 50% 50% 50% 50%;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: mine2;
+}
+.animate3 {
+    width: 250px;
+    height: 250px;
+    background-color: darkseagreen;
+    border-radius: 50% 50% 50% 50%;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-name: mine3;
+}
+
+@keyframes mine {
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes mine2 {
+    from {
+        margin-left: 0%;
+    }
+    
+    to {
+        margin-left: 100%;
+    }
+}
+
+@keyframes mine3 {
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+
+
+
+
 
 
 
