@@ -2,32 +2,56 @@
 <html>
     <head><link href="Pstyle.css" rel="stylesheet"></head>
     <body>
-        <h2>Dom Manipulation</h2>
-        <h4>Click the button to make new squares</h4>
-        <button id="myBtn" onclick="make()">Click</button><hr>
-        
-      <div>
-          <h3>
-              <p id="top">Top</p>
-              <p id="bottom">Bottom</p>
-          </h3>
+        <div id="intro">DOM Manipulation using Create Element</div><hr>
+        <div class="wrapper" id="ele"> 
+            <h3>Click the button to create a paragraph element</h3>
+            <button onclick="create()">Create</button>
+        </div><hr>
+        <div class="order">
+            <div>Now lets order some things, Click the insert before button to add to the list. Click the remove child button to remove an item from the list.</div>
+                <div id="orderBtn">
+                    <button onclick="addTo()">Insert Before</button><br><br>
+                    <button onclick="removeC()">Remove Child</button>
+                </div>
+            <ul id="list">
+                <li id="one">Javascript</li>
+                <li id="two">HTML</li>
+                <li id="three">CSS</li>
+            </ul>
+            <div id="added"></div>
+            <div id="removed"></div>
         </div>
-        <button onclick="order()">Order</button>
-        
     </body>
     <script>
-        function make() {
-            var btn = document.createElement("P");
-            var text = document.createTextNode("I'm alive!");
-            btn.appendChild(text);
-            document.body.appendChild(btn);
+        function create() {
+            var element = document.createElement("P"); 
+            var text = document.createTextNode("Element has been appended!");
+            element.appendChild(text);
+            document.getElementById("ele").appendChild(element);
         }
         
-        function order() {
-            var top = document.getElementById("top");
-            var bottom = document.getElementById("bottom");
+        var list = document.getElementById("list");
+        var first = document.getElementById("one");
+        
+        function addTo() {
             
-            top.insertBefore(bottom, top.childNodes[0]);
+            var item = document.createElement("li");
+            item.textContent = "jQuery";
+            
+            list.insertBefore(item, first);
+            document.getElementById("added").innerHTML = "Item has been added!";
+        }
+        
+        function removeC() {
+            list.removeChild(first, list);
+            document.getElementById("removed").innerHTML = "Item has been removed!";
         }
     </script>
 </html>
+
+
+
+
+
+
+
