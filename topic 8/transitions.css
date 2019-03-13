@@ -52,6 +52,7 @@ body {
     height: 250px;
     background-color: darkseagreen;
     border-radius: 50% 50% 50% 50%;
+    transition: ease-in;
     animation-name: mine;
     animation-duration: 3s;
 }
@@ -60,6 +61,7 @@ body {
     height: 250px;
     background-color: darkseagreen;
     border-radius: 50% 50% 50% 50%;
+    transition: ease-in;
     animation-delay: 1s;
     animation-duration: 3s;
     animation-name: mine2;
@@ -69,6 +71,7 @@ body {
     height: 250px;
     background-color: darkseagreen;
     border-radius: 50% 50% 50% 50%;
+    transition: ease-in;
     animation-delay: 2s;
     animation-duration: 3s;
     animation-name: mine3;
