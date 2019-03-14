@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="week09Style.css">
     </head>
-    <body onload="keys(ev)">
+    <body onload="startUp()">
         <div id="wrapper">
             <h1>JS Events</h1>
             <p>Use the selector to change the color of the square</p>
@@ -41,6 +41,10 @@
         </div>
     </body>
     <script>
+        
+        function startUp() {
+            alert("onload function has sent this message, load the page to see again");
+        }
         
         gball.style.visibility = "hidden";
         rball.style.visibility = "hidden";
