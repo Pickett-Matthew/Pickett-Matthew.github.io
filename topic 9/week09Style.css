@@ -58,21 +58,54 @@ body {
     to {left: 1100px }  
 }
 
-.touchEvent {
-    font-size: 150%;
+#changeEvent {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #432;
+    max-width: 700px;
+    height: 500px;
     text-align: center;
-    padding: 50px;
-    animation: blink;
-    animation-delay: 10s;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
+    padding:20px;
 }
 
 @keyframes blink {
     from {color: black;}
     to {color: lightgray;}
 }
+#here {
+    padding: 100px;
+    font-size: 30px;
+}
 
+#mobile {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #432;
+    max-width: 700px;
+    height: 500px;
+    text-align: center;
+    padding:20px;
+}
+#touch {
+    width: 80px;
+    height: 50px;
+    border-radius: 20% 20% 20% 20%;
+    background-color: aliceblue;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 50px;
+}
+#end {
+     width: 80px;
+    height: 50px;
+    border-radius: 20% 20% 20% 20%;
+    background-color: palevioletred;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 50px;
+}
 
 
 

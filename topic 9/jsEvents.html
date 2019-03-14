@@ -25,10 +25,19 @@
             </div>
         </div>
             
-         <div class="touchEvent">
-             <p>Scanning for keys</p>
-             <p id="ctrl">Hit the ctrl key</p>
-             <p id="shift">Hit the shift key</p>
+         <div id="changeEvent">
+             <h2>onChange event</h2>
+             <p>When the text of the input field changes, it will appear below</p>
+             <input type="text" id="input">
+             <p id="here"></p>
+        </div>
+        <div id="mobile">
+            <h2>onTouch event for Mobile/touch Devices</h2>
+            <p id="touch" ontouchstart="tStart()">Touch to start</p>
+            <p id="end" ontouchend="eStart()">Touch to end</p>
+            <p id="touchDisplay"></p>
+            <p id="endDisplay"></p>
+            
         </div>
     </body>
     <script>
@@ -50,13 +59,28 @@
                 rball.style.visibility = "visible";
             }
         }
+        document.getElementById("input").onchange = function() {ChangeEvent()};
         
-        var ctrl = document.getElementById("ctrl");
-        var shift = document.getElementById("shift");
-        
-        function keys() {
-            
+        function ChangeEvent() {
+            var y = document.getElementById("here");
+            var x = document.getElementById("input");
+            y.innerHTML = x.value;
         }
     
+        function tStart() {
+            document.getElementById("touchDisplay").innerHTML = "I felt that!";
+        }
+        
+        function eStart() {
+            document.getElementById("endDisplay").innerHTML = "I felt that too!";
+        }
     </script>
 </html>
+
+
+
+
+
+
+
+
