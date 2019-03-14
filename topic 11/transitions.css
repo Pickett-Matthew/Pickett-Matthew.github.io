@@ -71,6 +71,9 @@ body {
 #input:focus {
     width: 200px;
 }
+h1 {
+    text-align: center;
+}
 
 
 
