@@ -1,0 +1,100 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding 50px;
+    color: black;
+    
+}
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    background: #333;
+    padding: 100px;
+    width: 1200px;
+    height: auto;
+}
+.circleLeft {
+    width: 200px;
+    height: 200px;
+    background: lightsteelblue;
+    border: 5px solid black;
+    border-radius: 50% 50%;  
+}
+.circleRight {
+    width: 200px;
+    height: 200px;
+    background: lightsteelblue;
+    border: 5px solid black;
+    border-radius: 50% 50%;
+    transform: translateX(900px);
+        
+}
+#t1p {
+    text-align: center;
+}
+#t1p button {
+    padding: 20px;
+    border-radius: 10%;
+    background: lightsteelblue;
+}
+.myScale {
+    width: 200px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    text-align: center;
+    border: 2px solid black;
+}
+.myScale p {
+    top: 50%;
+    left: 50%;
+}
+#pScale {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+#scaleBtn {
+    width: 100px;
+    height: 30px;
+    border-radius: 10%;
+    float: right;
+    transform: translateX(-200px);
+    
+}
+.myScale2 {
+    background: red;
+    width: 200px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    text-align: center;
+    border: 2px solid black;
+    transform: scale(2.5, 2.5);
+}
+.rotate {
+    text-align: center;
+}
+.rotate p {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+}
+.rotate2 {
+    text-align: center;
+    transform: rotate(30deg);
+}
+
+
+
+
+

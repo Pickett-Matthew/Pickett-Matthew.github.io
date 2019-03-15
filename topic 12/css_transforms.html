@@ -1,101 +1,50 @@
 <!Doctype html>
 <html>
     <head>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <style>
-        h2 {
-            padding-top: 100px;
-        }
-        
-        .container{
-           text-align: center;
-        }
-        
-        .myBlock {
-            height: 200px;
-            width: 250px;
-            background-color: white;
-            border-style: solid;
-            border-color: red;
-            border-radius: 60px 20px;
-        }
-        
-        .translate {
-            height: 200px;
-            width: 250px;
-            background-color: white;
-            border-style: solid;
-            border-color: red;
-            border-radius: 60px 20px;
-            transform: translate(550px, 50px);
-        }
-        
-        .blue {
-            height: 150px;
-            width: 150px;
-            background-color: white;
-            border-style: solid;
-            border-color: skyblue;
-            border-radius: 60px 20px;
-            transform: translate(900px);
-        }
-        
-        .scale {
-            height: 150px;
-            width: 150px;
-            background-color: white;
-            border-style: solid;
-            border-color: skyblue;
-            border-radius: 60px 20px;
-            transform: translate(550px) scale(2);
-        }
-        
-        .block {
-            width: 200px;
-            height: 200px;
-            background-color: lightsteelblue;
-            font-size: 200%;
-            transform: translate(900px);
-        }
-        
-        .rotateX {
-            width: 200px;
-            height: 200px;
-            background-color: lightsteelblue;
-            font-size: 200%;
-            transform: translate(900px) rotateZ(180deg);
-        }
-        
-    </style>
     <body>
-        <div class="container">
-            <h1>Transforms</h1>
+        <h1>Transforms</h1>
+        <div class="wrapper">
+            <p id="t1p">
+                <button onclick="myFunc()">transform right to left</button>
+            </p>
+            <div class="circleLeft" id="circ"></div>
+        </div><hr>
+        <div class="wrapper">
+            <p id="pScale">
+                Make this element bigger by using scale()
+                <button onclick="myScale()" id="scaleBtn">Scale</button>
+            </p>
+            <div class="myScale" id="scale">
+                <p>Can you read this?</p>
+            </div>
+        </div><hr>
             
-            <button onclick="myTranslate()">Translate</button>
-            <div class="myBlock" id="block"></div>
-            
-            <h2><button onclick="scale()">Scale</button></h2>
-            <div class="blue" id="sc"></div>
-            
-            <h2><button onclick="myRotate()">RotateX</button></h2>
-            <div class="block" id="rotate">FLIP</div>
+        <div class="wrapper">
+            <div class="rotate" id="r">
+                <p>Rotate Mario<button onclick="myRotate()" id="scaleBtn">Rotate</button></p>
+                <img src="mario.png" id="mario">
+            </div> 
         </div>
     </body>
     <script>
         
-        function myTranslate() {
-            
-            document.getElementById("block").className = "translate";
+        function myFunc() {
+            var circle = document.getElementById("circ");
+            circle.classList.toggle("circleRight");
         }
         
-        function scale() {
-            document.getElementById("sc").className = "scale";
+        function myScale() {
+            var scaler = document.getElementById("scale");
+            scaler.classList.toggle("myScale2");
         }
-        
         function myRotate() {
-            document.getElementById("rotate").className = "rotateX";
+            var mario = document.getElementById("mario");
+            mario.classList.toggle("rotate2");
         }
     </script>
+        
 </html>
 
 
