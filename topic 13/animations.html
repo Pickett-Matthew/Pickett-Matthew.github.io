@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="animation_style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Animations</h1><hr>
+            <p id="pA1">Color changing animation, iteration count set to infinite</p>
+            <div id="A1"></div>
+        </div><hr>
+        
+        <div class="wrapper">
+            <div id="A2">
+                <p id="A2p">
+                    <button onclick="LTA()">See the Animation</button>
+                </p>
+                <p class="start" id="text">
+                    Welcome<br>
+                    To My<br>
+                    Page!<br>
+                </p>
+            </div>
+        </div><hr>
+        
+        <div class="wrapper">
+            <p id="mBtn"><button onclick="mario()">Make Mario Move</button></p>
+            <p id="mario"><img src="mario.png"></p>
+            <p id="grass"><img src="grass.png"</p>
+        </div>
+        
+        
+        <script>
+            function LTA() {
+                var text = document.getElementById("text");
+                text.className = "textAnimate";
+            }
+            
+            function mario() {
+                var mar = document.getElementById("mario");
+                mar.className = "mAnimate";
+            }
+        </script>
+    </body>
+</html>
