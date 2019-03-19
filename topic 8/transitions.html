@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="transitions.css">
+        <title>CSS Transitions</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>CSS TRANSITIONS</h1>
+            <button onclick="move()">Trigger JS</button>
+            <div id="box1">
+                <div id="box2"></div>
+            </div>
+        </div><hr>
+        <div class="wrapper2">
+            <p>Animations</p>
+            <button onclick="myAnimate()">Begin</button>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+        </div>
+    </body>
+    <script>
+        function move() {
+            var ele = document.getElementById("box2")
+            var pos = 0;
+            var id = setInterval(frame, 10);
+            
+            function frame() {
+                if (pos == 400) {
+                    clearInterval(id)
+                } else {
+                    pos++;
+                    ele.style.top = pos + 'px';
+                    ele.style.left = pos + 'px';
+                }
+            }
+        }
+        
+        function myAnimate() {
+            
+            var one = document.getElementById("1");
+            one.classList.toggle("animate1");
+            var two = document.getElementById("2");
+            two.classList.toggle("animate2");
+            var three = document.getElementById("3");
+            three.classList.toggle("animate3");
+            
+        }
+    </script>
+</html>
